@@ -10,6 +10,8 @@ var school = require('./routes/school_routes');
 
 var account = require('./routes/account_routes');
 var resume = require('./routes/resume_routes');
+var company = require('./routes/company_routes');
+var address = require('./routes/address_routes');
 
 
 
@@ -38,6 +40,8 @@ app.use('/', index);
 app.use('/school', school);
 app.use('/account',account);
 app.use('/resume',resume);
+app.use('/company',company);
+app.use('/address',address);
 
 
 
