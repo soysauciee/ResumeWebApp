@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Resume</title>
+</head>
+<body>
+<h1>Resume</h1>
+<table border="1">
+    <tr><th>Account ID</th><th>Resume Name</th><</tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><%= result[i].account_id%></td>
+        <td><a href="/account/?account_id=<%= result[i].account_id %>"><%= result[i].resume_name %></a></td>
+
+
+    </tr>
+    <% } %>
+</table>
+</body>
+
+</html>

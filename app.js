@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var school = require('./routes/school_routes');
 
 var account = require('./routes/account_routes');
+var resume = require('./routes/resume_routes');
 
 
 
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/school', school);
 app.use('/account',account);
+app.use('/resume',resume);
 
 
 
