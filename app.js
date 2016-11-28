@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var school = require('./routes/school_routes');
-
 var account = require('./routes/account_routes');
 var resume = require('./routes/resume_routes');
 var company = require('./routes/company_routes');

@@ -12,7 +12,7 @@ exports.getAll = function(callback) {
     });
 };
 
-exports.getById = function(school_id, callback) {
+exports.getById = function(address_id, callback) {
     var query = 'SELECT * FROM address WHERE address_id = ?';
     var queryData = [address_id];
 
