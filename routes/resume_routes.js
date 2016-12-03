@@ -50,11 +50,11 @@ router.get('/', function(req, res){
 
 // Delete a resume for the given resume_id
 router.get('/delete', function(req, res){
-    if(req.query.account_id == null) {
-        res.send('account_id is null');
+    if(req.query.resume_id == null) {
+        res.send('resume_id is null');
     }
     else {
-        resume_dal.delete(req.query.account_id, function(err, result){
+        resume_dal.delete(req.query.resume_id, function(err, result){
             if(err) {
                 res.send(err);
             }

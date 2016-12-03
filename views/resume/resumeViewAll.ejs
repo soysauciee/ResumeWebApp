@@ -20,7 +20,7 @@
         <td><a href="/resume/?resume_id=<%= result[i].resume_id %>"> <%= result[i].resume_name %></a></td>
 
         <td><form action="/resume/delete/">
-                <input type="hidden" name="account_id" id="account_id" value="<%= result[i].account_id %>" />
+                <input type="hidden" name="resume_id" id="resume_id" value="<%= result[i].resume_id %>" />
                 <input type="submit" value="Delete"/>
             </form>
         </td>
