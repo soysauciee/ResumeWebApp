@@ -5,13 +5,13 @@
 <body>
 <h1>Add New Resume</h1>
 <form action="/resume/insert" method="get">
-    Resume Name: <input id="school_name" name="school_name" type="text" />
+    Resume Name: <input id="resume_id" name="resume_name" type="text" />
     <br />
     <br />
-    Address
-    <select id="address_id" name="address_id">
-        <% for(var i=0; address.length > i; i++ ) { %>
-        <option value="<%= address[i].address_id %>"><%= address[i].street + ', ' + address[i].zipcode %></option>
+    Resume
+    <select id="resume_id" name="resume_id">
+        <% for(var i=0; resume.length > i; i++ ) { %>
+        <option value="<%= resume[i].resume_id %>"><%= resume[i].first_name   %></option>
         <% } %>
     </select>
 
