@@ -20,3 +20,27 @@ exports.getById = function(address_id, callback) {
         callback(err, result);
     });
 };
+
+
+
+
+
+
+
+
+
+
+exports.delete = function(address_id, callback) {
+    var query = 'DELETE FROM address WHERE address_id = ?';
+    var queryData = [address_id];
+
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+    });
+
+};
+
+
+
+
+

@@ -33,4 +33,49 @@ router.get('/', function(req, res){
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Delete a school for the given school_id
+router.get('/delete', function(req, res){
+    if(req.query.address_id == null) {
+        res.send('address_id is null');
+    }
+    else {
+        address_dal.delete(req.query.address_id, function(err, result){
+            if(err) {
+                res.send(err);
+            }
+            else {
+                //poor practice, but we will handle it differently once we start using Ajax
+                res.redirect(302, '/address/all');
+            }
+        });
+    }
+});
+
+
+
+
+
 module.exports = router;
