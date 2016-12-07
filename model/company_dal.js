@@ -21,6 +21,19 @@ exports.getById = function(company_id, callback) {
     });
 };
 
+exports.insert = function(params, callback) {
+    var query = 'INSERT INTO company (company_name, company_id) VALUES (?, ?)';
+
+    // the question marks in the sql query above will be replaced by the values of the
+    // the data in queryData
+    var queryData = [params.company_name, params.company_id];
+
+    connection.query(query, queryData, function(err, result) {
+        callback(err, result);
+    });
+
+}
+
 
 
 
