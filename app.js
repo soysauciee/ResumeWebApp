@@ -22,6 +22,7 @@ var skill = require('./routes/skill_routes');
 
 
 
+
 var app = express();
 
 // view engine setup
@@ -44,6 +45,8 @@ app.use('/resume',resume);
 app.use('/company',company);
 app.use('/address',address);
 app.use('/skill',skill);
+
+
 
 
 

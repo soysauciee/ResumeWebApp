@@ -38,24 +38,6 @@ router.get('/', function(req, res){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Delete a school for the given school_id
 router.get('/delete', function(req, res){
     if(req.query.address_id == null) {

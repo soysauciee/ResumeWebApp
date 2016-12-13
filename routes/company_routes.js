@@ -48,6 +48,30 @@ router.get('/add', function(req, res){
 });
 
 
+// insert a company record
+router.get('/insert', function(req, res){
+    // simple validation
+    if(req.query.company_name == null) {
+        res.send('company Name must be provided.');
+    }
+    else if(req.query.company_id == null) {
+        res.send('An company_id must be selected');
+    }
+    else {
+        // passing all the query parameters (req.query) to the insert function instead of each individually
+        company_dal.insert(req.query, function(err,result) {
+            if (err) {
+                res.send(err);
+            }
+            else {
+                //poor practice, but we will handle it differently once we start using Ajax
+                res.redirect(302, '/company/all');
+            }
+        });
+    }
+});
+
+
 
 
 

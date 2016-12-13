@@ -35,26 +35,6 @@ router.get('/', function(req, res){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Delete a skill for the given skill_id
 router.get('/delete', function(req, res){
     if(req.query.skill_id == null) {

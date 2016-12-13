@@ -1,5 +1,5 @@
 var mysql   = require('mysql');
-var db  = require('./db_connection.js');
+var db  = require('./../../ProjectCS355/ResumeWebAppLab12-master/ResumeWebAppLab12-master/model/db_connection.js');
 
 /* DATABASE CONFIGURATION */
 var connection = mysql.createConnection(db.config);
@@ -33,35 +33,6 @@ exports.insert = function(params, callback) {
     });
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 exports.delete = function(company_id, callback) {
